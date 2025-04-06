@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:theme": "shopify theme dev",
-    "start:css": "concurrently \"node --max-old-space-size=4096\" \"./node_modules/.bin/tailwindcss -i ./assets/app-tailwind.css -o ./assets/app.css --watch\"",
+    "start:css": "tailwindcss -i ./assets/app-tailwind.css -o ./assets/app.css --watch",
     "start": "concurrently \"pnpm run start:theme\" \"pnpm run start:css\"",
     "prepare": "husky install"
   },
@@ -32,6 +32,7 @@
     "tailwindcss": "^4.1.3"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.3",
     "@trelliscommerce/prettier-config": "^1.0.0"
   },
   "prettier": "@trelliscommerce/prettier-config",
