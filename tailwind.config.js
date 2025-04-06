@@ -1,11 +1,11 @@
 module.exports = {
-  prefix: 'twcss-',
   content: [
-    './layout/*.liquid',
-    './templates/*.liquid',
-    './templates/customers/*.liquid',
-    './sections/*.liquid',
-    './snippets/*.liquid',
+    './layout/**/*.{js,liquid}',
+    './templates/**/*.{js,liquid}',
+    './sections/**/*.{js,liquid}',
+    './snippets/**/*.{js,liquid}',
+    './assets/**/*.{js,css}',
+    './scripts/**/*.js',
   ],
   theme: {
     screens: {
@@ -22,5 +22,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/aspect-ratio')],
 };
