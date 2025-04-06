@@ -36,7 +36,7 @@ if (!customElements.get('localization-form')) {
             this.onSearchFocus.bind(this),
           );
           this.elements.search.addEventListener(
-            'blur',
+            'blur-sm',
             this.onSearchBlur.bind(this),
           );
           this.elements.search.addEventListener(
